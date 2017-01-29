@@ -9,7 +9,7 @@ Repetier firmware works pretty well, but any 3D printer firmware *should* work (
 Use [Repetier Host](http://www.repetier.com/download-now/).
 
 #Dobot
-The Dobot Magician is similar to the Dobot V1. Both are a 3 axis 4DOF arm configured as follows:
+The Dobot Magician is similar to the Dobot V1. Both are a 3 axis 4DOF arm configured as follows (R values in cm are approximate):
 
 ![axis labeling](documentation/DoBotKinematics.png)
 
