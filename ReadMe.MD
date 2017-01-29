@@ -11,7 +11,7 @@ Use [Repetier Host](http://www.repetier.com/download-now/).
 #Dobot
 The Dobot Magician is similar to the Dobot V1. Both are a 3 axis 4DOF arm configured as follows:
 
-![axis labeling](documentation/axis-labeling-with-angles.png)
+![axis labeling](documentation/DoBotKinematics.png)
 
 Extension of joints and alternative mounting configuration (inverted gantry and 90 degree bulkhead mounting) are also being explored.
 
