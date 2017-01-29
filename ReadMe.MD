@@ -1,21 +1,20 @@
-#Armour - open source robotic arm control software.
-This project was designed to be a replacement for the useless software provided with the Dobot robotic arm, but should work well with any robotic arm that can be modelled using Denavit-Hartenberg parameters.
-This is in a very, very early stage, and is only a console app at the moment, allowing control of the arm through the keyboard.
+#MOBOTS - Mars or Bust- Off the Shelf (robotic arm design and control for 3D Printing) 
+This project was originated to develop a 3D printing robotic arm for [NASA's 3D-Printed Habitat Challenge] (http://bradley.edu/challenge/). Baseline hardware utilizes the DoBot Magician. The software is forked from the Paul Morris Hill's Armour code, designed to be a replacement for the software provided with the Dobot robotic arm.
 
 #Firmware
-The current implementation uses G-Codes as the protocol for arm control and assumes that your arm is set up for one degree per mm.
+This implementation uses G-Codes as the arm control protocol and assumes that the arm is set up for one degree per mm.
 I use the repetier firmware which works pretty well but any 3D printer firmware should work.
 
 #Host software
-Obviously this software is the host software but it's not the greatest tool to use to test your connections and pin assignments. For that I use the [repetier host](http://www.repetier.com/download-now/).
+Use [Repetier Host](http://www.repetier.com/download-now/).
 
 #Dobot
-The dobot is configured with the three axes laid out in the following arangement.
+The Dobot Magician is similar to the Dobot V1. Both are a 3 axis 4DOF arm configured as follows:
 
 ![axis labeling](documentation/axis-labeling-with-angles.png)
 
-##Wiring the Dobot with RAMPS
-I'd recommend using the RAMPS 1.4 driver board as it provides outputs for all functions relating to the arm.
+##Hardware -Electrical
+Dobot never made their system open source, so modifications are nearly impossible to the stock firmware and electronics.  Following other projects to make the Dobot system usable, the Dobot approach must upgrade to an Arduino MEGA 2560 with a RAMPS 1.4 driver board.
 
 Here is a picture of the RAMPS board wired up to the Dobot outputs.
 
