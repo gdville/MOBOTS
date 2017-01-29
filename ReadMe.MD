@@ -1,9 +1,9 @@
 #MOBOTS - Mars or Bust- Off the Shelf (robotic arm design and control for 3D Printing) 
-This project was originated to develop a 3D printing robotic arm for [NASA's 3D-Printed Habitat Challenge] (http://bradley.edu/challenge/). Baseline hardware utilizes the DoBot Magician. The software is forked from the Paul Morris Hill's Armour code, designed to be a replacement for the software provided with the Dobot robotic arm.
+This project was originated to develop a 3D printing robotic arm for [NASA's 3D-Printed Habitat Challenge] (http://bradley.edu/challenge/). Baseline hardware utilizes the DoBot Magician. The software is forked from the [Paul Morris Hill's Armour code](https://github.com/paulmorrishill/armour), designed to be a replacement for the software provided with the Dobot robotic arm.
 
 #Firmware
-This implementation uses G-Codes as the arm control protocol and assumes that the arm is set up for one degree per mm.
-I use the repetier firmware which works pretty well but any 3D printer firmware should work.
+This implementation uses G-Code as the arm control protocol and assumes that the arm is set up for one degree per mm.
+Repetier firmware works pretty well, but any 3D printer firmware *should* work (but is not tested).
 
 #Host software
 Use [Repetier Host](http://www.repetier.com/download-now/).
