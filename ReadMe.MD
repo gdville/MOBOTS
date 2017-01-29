@@ -60,12 +60,10 @@ Currently set up with
 
 ![app](documentation/screenshot.png)
 
-When adding to the project where possible develop with TDD.
+*When adding to the project where possible develop with TDD.
 
 ## Forward kinematics
 The forward kinematics uses a series of Denavit-Hartenberg matricies with parameters specified by the arm being controlled. For now this is the Dobot arm parameters but could be any arm.
 
 ## Inverse kinematics
-The inverse kinematics uses a hill climbing algorithm to identify the correct set of joint variables. With a randomized restart when a local maxima is reached.
-
-This is not the most efficient algorithm but I don't know enough maths to improve it at this point. If someone who understands IK better can write a better algorithm I'll happily merge a pull request.
+The inverse kinematics uses a hill climbing algorithm to identify the correct set of joint variables, with a randomized restart when a local maxima is reached. 
