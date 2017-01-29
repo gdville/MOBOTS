@@ -1,5 +1,5 @@
 #MOBOTS - Mars or Bust- Off the Shelf (robotic arm design and control for 3D Printing) 
-This project was originated to develop a 3D printing robotic arm for [NASA's 3D-Printed Habitat Challenge] (http://bradley.edu/challenge/). Baseline hardware utilizes the DoBot Magician. The software is forked from the [Paul Morris Hill's Armour code](https://github.com/paulmorrishill/armour), designed to be a replacement for the software provided with the Dobot robotic arm.
+This project originated to develop a 3D printing robotic arm for [NASA's 3D-Printed Habitat Challenge] (http://bradley.edu/challenge/). Baseline hardware utilizes the DoBot Magician. The software is forked from the [Paul Morris Hill's Armour code](https://github.com/paulmorrishill/armour), designed to be a replacement for the software provided with the Dobot robotic arm.
 
 #Firmware
 This implementation uses G-Code as the arm control protocol and assumes that the arm is set up for one degree per mm.
@@ -12,6 +12,9 @@ Use [Repetier Host](http://www.repetier.com/download-now/).
 The Dobot Magician is similar to the Dobot V1. Both are a 3 axis 4DOF arm configured as follows:
 
 ![axis labeling](documentation/axis-labeling-with-angles.png)
+
+Extension of joints and alternative mounting configuration (inverted gantry and 90 degree bulkhead mounting) are also being explored.
+
 
 ##Hardware -Electrical
 Dobot never made their system open source, so modifications are nearly impossible to the stock firmware and electronics.  Following other projects to make the Dobot system usable, the Dobot approach must upgrade to an Arduino MEGA 2560 with a RAMPS 1.4 driver board.
@@ -52,7 +55,7 @@ This mounting reduces the range of the X axis to about 250&deg; but it's worth i
 - Open Repetier host and confirm that all the arm functions are working. Servos can be adjusted using [M340](http://reprap.org/wiki/Gcode#M340:_Control_the_servos)
 
 # Running/Development
-To run this project you'll need visual studio. Set the start up project to "ConsoleArmControl". That is the main entry point at this stage.
+*To run this project you'll need visual studio. Set the start up project to "ConsoleArmControl". That is the main entry point at this stage.
 Currently set up with
 
 ![app](documentation/screenshot.png)
@@ -61,6 +64,7 @@ When adding to the project where possible develop with TDD.
 
 ## Forward kinematics
 The forward kinematics uses a series of Denavit-Hartenberg matricies with parameters specified by the arm being controlled. For now this is the Dobot arm parameters but could be any arm.
+
 ## Inverse kinematics
 The inverse kinematics uses a hill climbing algorithm to identify the correct set of joint variables. With a randomized restart when a local maxima is reached.
 
