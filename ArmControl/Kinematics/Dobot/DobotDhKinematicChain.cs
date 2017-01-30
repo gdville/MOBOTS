@@ -38,7 +38,7 @@ namespace ArmControl.Kinematics.Dobot
 
       var xValid = x >= 0 && x <= 250;
       var yValid = y <= 99 && y >= -20;
-      //The range of the Z axis on the dotot increases with every degree of the x
+      //The range of the Z axis on the dobot increases with every degree of the x
       var extraZDueToY = Math.Max(90 - y, 0);
       extraZDueToY = Math.Min(extraZDueToY, 45); //Capped out at 45 degrees extra
       var reductionInZDueToY = Math.Min(y - 45, 0);
